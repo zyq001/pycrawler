@@ -1,0 +1,775 @@
+
+#head 取噪声的后几个字符，
+#tail 取噪声的前几个字符，
+#noise 取噪声的全部字符，
+
+common:
+  rm:
+  -  script
+  -  style
+  -  span[style*="display:none"]
+  -  '.watermark'
+  head:
+
+  tail:
+  -  （~~~~~~故事连载中~~~~~~~）
+  -  '小提示：按'
+  -  '上一章'
+  -  '上一页'
+  -  '加入书签'
+
+  noise:
+  -  'www{0,15}com'
+
+
+www.iqingdou.net:
+  content: '#chapter_content'
+  rm:
+
+  head:
+
+  tail:
+  noise:
+
+qingdou.net:
+  content: '#chapter_content'
+  rm:
+
+  head:
+
+  tail:
+  noise:
+
+read.qidian.com:
+  content: '.bookreadercontent'
+  rm:
+
+  head:
+
+  tail: 起点中文网
+  noise:
+
+www.bookabc.net:
+  content: '#content'
+  rm:
+
+  head:
+
+  tail:
+
+  noise:
+www.ranwen.org:
+  content: '#content'
+  rm:
+
+  head:
+
+  tail:
+
+  noise:
+
+www.dajiadu.net:
+  content: '#content'
+  rm:
+  -  '.copy'
+  head:
+
+  tail:
+
+  noise:
+
+huayu.baidu.com:
+  content: '.book_con'
+  rm:
+  -  'div'
+  head:
+
+  tail:
+
+  noise:
+
+pub.zongheng.com:
+  content: '#chapterContent'
+  rm:
+  -  'div'
+  head:
+
+  tail:
+
+  noise:
+book.zongheng.com:
+  content: '#chapterContent'
+  rm:
+  -  'div'
+  head:
+
+  tail:
+
+  noise:
+
+b.easou.com:
+  content: '.show'
+  rm:
+  -  div
+  head:
+
+  tail: '起点中文网'
+
+  noise:
+
+www.dhzw.com:
+  content: '#BookText'
+  rm:
+  -  div
+  -  table
+
+  head:
+
+  tail:
+
+  noise:
+
+www.vodtw.com:
+  content: '#BookText'
+  rm:
+  -  div
+  -  table
+
+  head:
+
+  tail:
+
+  noise:
+
+
+www.qmshu.com:
+  content: '#htmlContent'
+  rm:
+  -  div
+  -  table
+
+  head:
+
+  tail:
+
+  noise:
+
+shuhaha.com:
+  content: '#BookText'
+  rm:
+  -  div
+  -  table
+
+  head:
+
+  tail:
+
+  noise:
+
+www.5ccc.net:
+  content: '#content'
+  rm:
+  -  '#toplink'
+  head:
+
+  tail:
+
+  noise:
+
+www.wxguan.com:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.bingdi.cc:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.piaotian.net:
+  content: '#content'
+  rm:
+  -  div
+  -  table
+  -  h1
+  head:
+
+  tail:
+
+  noise:
+
+www.u8xs.com:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.09xs.com:
+  content: '#content'
+  rm:
+  -  div
+  head:  '提供精彩小说阅读。'
+
+  tail:  '手机用户请浏览'
+
+  noise:
+
+www.muyuge.com:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.shuhuangge.org:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.kewaishu.org:
+  content: '#content'
+  rm:
+  -  div
+  -  table
+  head:
+
+  tail:
+
+  noise:
+
+www.33yq.com:
+  content: '#TXT'
+  rm:
+  -  div
+  -  table
+  -  font
+  head:
+
+  tail:
+
+  noise:
+
+www.ttshuba.com:
+  content: '#TXT'
+  rm:
+  -  div
+  -  table
+  -  font
+  head:
+
+  tail:
+
+  noise:
+
+www.tszww.com:
+  content: '#table_container'
+  rm:
+  -  div
+  -  table
+  -  font
+  head:
+
+  tail:
+
+  noise:
+
+www.33yq.com:
+  content: '#TXT'
+  rm:
+  -  div
+  -  table
+  -  font
+  head:
+
+  tail:
+
+  noise:
+
+www.readnovel.com:
+  content: '.zhangjie'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+vip.readnovel.com:
+  content: '.zhangjie'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.xs8.cn:
+  content: '#chapter_content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.xs7.cn:
+  content: '#content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+vip.xs8.cn:
+  content: '#chapter_content'
+  rm:
+  -  div
+  head:
+
+  tail:
+
+  noise:
+
+www.du7.com:
+  content: '#fontsize'
+  rm:
+  head:
+
+  tail:
+
+  noise:
+
+www.17k.com:
+  content: '#chapterContentWapper'
+  rm:
+  -  '.qrcode'
+  -  'div'
+  head:
+
+  tail: '本书首发来自17K'
+
+  noise:
+
+www.jlgcyy.com:
+  content: '#chapterContentWapper'
+  rm:
+  -  '.novel_head'
+  -  '.novel_content'
+  head:
+
+  tail: 吉林小说网www.jlgcyy.com
+  noise:
+
+www.yqhhy.cc:
+  content: '#content'
+  rm:
+
+  head: '更多言情小说，尽在言情后花园。请记住本站：言情后花园 www.yqhhy.cc'
+  tail:
+
+  noise:
+
+www.79wx.com:
+  content: '#content'
+  rm:
+  - b
+  head:
+  tail:
+
+  noise:
+  -  '79免费小说阅读网79wx'
+  -  '79wx'
+  -  '79免费小说阅读网'
+  -  '免费小说阅读网'
+
+
+baishuku.com:
+  content: '#content'
+  rm:
+  - '#toplink'
+  head:
+  tail:
+
+  noise:
+
+
+book.58xs.com:
+  content: '#content'
+  rm:
+  - fieldset
+  - table
+  - div
+  head: 本站公告
+  tail: 58xs.com
+
+  noise:
+
+www.sangwu.org:
+  content: '.content'
+  rm:
+  - fieldset
+  - table
+  - div
+  head: '本站公告'
+  tail:
+
+  noise:
+
+leduwo.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+  -  '26dd.{0,2}书.{0,2}友.{0,2}整.{0,2}理.{0,2}提.{0,2}供'
+
+leduwo.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+  -  '26dd.{0,2}书.{0,2}友.{0,2}整.{0,2}理.{0,2}提.{0,2}供'
+
+www.shuotxts.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+  -  'www.{0,5}xshuotxt.{0,5}com'
+
+www.365if.com:
+  content: '#content'
+  rm:
+  -  a
+  head:
+  tail:
+
+  noise:
+
+www.syzww.net:
+  content: '#content'
+  rm:
+  -  a
+  head:
+  tail:
+
+  noise:
+
+www.69shu.com:
+  content: '.yd_text2'
+  rm:
+  -  a
+  head:
+  tail:
+
+  noise:
+
+
+www.yixia.net:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+8jzw.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.kanshu58.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.3gxs.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.aszw8.com:
+  content: '#contents'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.guliw.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.kewaishu.org:
+  content: '#content'
+  rm:
+  -  'table'
+  head:
+  tail:
+
+  noise:
+
+www.snwx.com:
+  content: '#BookText'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.lwxs520.com:
+  content: '#content'
+  rm:
+  -  div
+  head:
+  tail:
+
+  noise:
+
+www.7kankan.com:
+  content: '#content'
+  rm:
+  head:
+  tail: 'www.7kankan.com'
+
+  noise:
+
+3gsc.com.cn:
+  content: '.menu-area'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.yssm.org:
+  content: '#content'
+  rm:
+  head:
+  tail: '看完记得：'
+
+  noise:
+
+
+www.xiaoshuo77.com:
+  content: '#content'
+  rm:
+  head:
+  tail: '看完记得：方便下次看，或者。'
+
+  noise:
+
+
+www.77xsk.com:
+  content: '#chapter_content'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+
+
+
+book.xxs8.com:
+  content: '#read-content'
+  rm:
+  -  div
+  -  h2
+  head:
+  tail:
+
+  noise:
+
+
+www.xxsy.net:
+  content: '#zjcontentdiv'
+  rm:
+  -  div
+  -  h2
+  head:
+  tail: '本书由潇湘书院首发，请勿转载！'
+
+  noise:
+
+
+
+hlj3.com:
+  content: '#content'
+  rm:
+  -  '.tipinfo'
+  -  'h1'
+  head:
+  tail:
+
+  noise:
+  -  '\(?TXT.*小说.*网'
+  -  '网.{0,3}址'
+  -  'www.hlj3.com\)?'
+
+
+
+www.88zw.com:
+  content: '#content'
+  rm:
+  head:
+  tail:
+
+  noise:
+  -  '巴.*巴.*小.*说.*网'
+
+
+chuanyuemi.com:
+  content: '#content .text'
+  rm:
+  -  div
+  -  table
+  -  h1
+  -  h2
+  -  h3
+  -  a
+  head:
+  tail:
+
+  noise:
+  -  '巴.*巴.*小.*说.*网'
+
+
+www.hlxiaoshuo.com:
+  content: '#content'
+  rm:
+  -  '.tipinfo'
+  -  'h1'
+  head:
+  tail:
+
+  noise:
+  -  '\(?TXT.*小说.*网'
+  -  '网.{0,3}址'
+  -  'www.hlj3.com\)?'
+
+
+www.100huts.com:
+  content: '#BookText'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+www.ybdu.com:
+  content: '#htmlContent'
+  rm:
+  -  div
+  head:
+  tail:
+
+  noise:
+
+
+www.zaidudu.net:
+  content: '#contents'
+  rm:
+  head:
+  tail:
+
+  noise:
+  -  '会员手打'
+  -  '【.{0,3}小.{0,3}说.{0,3}网.{0,3}】'
+
+
+www.klxsw.com:
+  content: '#r1c'
+  rm:
+  head:
+  tail:
+
+  noise:
+
+
+www.readnovel.com:
+  content: '.zhangjie'
+  rm:
+  -  div
+  head:
+  tail:
+
+  noise:
+
+
+www.qbxs8.net:
+  content: '.content .text'
+  rm:
+  -  div
+  -  table
+  -  h1
+  -  h2
+  -  a
+
+  head:
+  tail: '看完记得：'
+  noise:
+  -  '，经典小说网（）'
+  -  '经典小说网'
+
+www.3dllc.com:
+  content: '.zhang-txt-nei-rong'
+
+  rm:
+  -  .con_ad
+  -  style[style="text-align:center;"]
+  -  '#pageselect'
+  -  .b-g-w
+  -  iframe
+  -  .biao-qian-love-bd
+
+  head:
+
+  tail:
+
+  noise:

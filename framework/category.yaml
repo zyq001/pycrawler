@@ -1,0 +1,610 @@
+总裁:
+  typeCode: 2
+  categoryCode: 1
+  category: 言情
+  url: 'http://b.easou.com/w/booklib/all_%E8%A8%80%E6%83%85_%E6%80%BB%E8%A3%81_2_0_1.html'
+
+腹黑:
+  typeCode: 3
+  categoryCode: 1
+  category: 言情
+  url: 'http://b.easou.com/w/booklib/all_%E8%A8%80%E6%83%85_%E8%85%B9%E9%BB%91_2_0_1.html'
+  
+爱情:
+  typeCode: 4
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+女尊:
+  typeCode: 5
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+美男:
+  typeCode: 6
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+王妃:
+  typeCode: 7
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+虐恋情深:
+  typeCode: 8
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+重生:
+  typeCode: 10
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+热血:
+  typeCode: 11
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+异能:
+  typeCode: 12
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+神魔:
+  typeCode: 13
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+魔法:
+  typeCode: 14
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+法宝:
+  typeCode: 15
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+升级练功:
+  typeCode: 16
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+魔王附体:
+  typeCode: 17
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+官场:
+  typeCode: 19
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+明星:
+  typeCode: 20
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+职场:
+  typeCode: 21
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+同居:
+  typeCode: 22
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+商战:
+  typeCode: 23
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+创业:
+  typeCode: 24
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+都市情缘:
+  typeCode: 25
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+耽美:
+  typeCode: 27
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+同人:
+  typeCode: 28
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+火影:
+  typeCode: 29
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+综漫:
+  typeCode: 30
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+  
+网王:
+  typeCode: 31
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+猎人:
+  typeCode: 32
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+校花:
+  typeCode: 34
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+  
+青春:
+  typeCode: 35
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+纯爱:
+  typeCode: 36
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+大学:
+  typeCode: 37
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+青梅竹马:
+  typeCode: 38
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+青春疼痛:
+  typeCode: 39
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+花季校园:
+  typeCode: 40
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+清穿:
+  typeCode: 42
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+后宫:
+  typeCode: 43
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+古代:
+  typeCode: 44
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+帝王:
+  typeCode: 45
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+皇妃:
+  typeCode: 46
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+  
+宫斗:
+  typeCode: 47
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+三国:
+  typeCode: 48
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+架空历史:
+  typeCode: 49
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+修真:
+  typeCode: 51
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+仙侠:
+  typeCode: 52
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+武功:
+  typeCode: 53
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+蜀山:
+  typeCode: 54
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+江湖:
+  typeCode: 55
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+特种兵:
+  typeCode: 59
+  categoryCode: 58
+  category: 军事
+  url: ''
+  
+其他军事:
+  typeCode: 435
+  categoryCode: 58
+  category: 军事
+  url: ''
+  
+战争:
+  typeCode: 61
+  categoryCode: 58
+  category: 军事
+  url: ''
+  
+战士:
+  typeCode: 62
+  categoryCode: 58
+  category: 军事
+  url: ''
+  
+复仇:
+  typeCode: 65
+  categoryCode: 64
+  category: 剧情
+  url: ''
+  
+争霸:
+  typeCode: 66
+  categoryCode: 64
+  category: 剧情
+  url: ''
+  
+权谋:
+  typeCode: 67
+  categoryCode: 64
+  category: 剧情
+  url: ''
+  
+暗黑:
+  typeCode: 68
+  categoryCode: 64
+  category: 剧情
+  url: ''
+  
+游戏:
+  typeCode: 70
+  categoryCode: 69
+  category: 网游
+  url: ''
+  
+魔兽:
+  typeCode: 71
+  categoryCode: 69
+  category: 网游
+  url: ''
+  
+竞技:
+  typeCode: 72
+  categoryCode: 69
+  category: 网游
+  url: ''
+  
+卡片:
+  typeCode: 73
+  categoryCode: 69
+  category: 网游
+  url: ''
+  
+异界:
+  typeCode: 75
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+位面:
+  typeCode: 76
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+其他科幻:
+  typeCode: 438
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+病毒:
+  typeCode: 78
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+末世:
+  typeCode: 79
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+探险:
+  typeCode: 80
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+生化:
+  typeCode: 81
+  categoryCode: 74
+  category: 科幻
+  url: ''
+  
+僵尸:
+  typeCode: 83
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+盗墓:
+  typeCode: 84
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+风水:
+  typeCode: 85
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+惊悚:
+  typeCode: 86
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+丧尸:
+  typeCode: 87
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+鬼怪:
+  typeCode: 88
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+吸血鬼:
+  typeCode: 89
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+悬疑:
+  typeCode: 91
+  categoryCode: 90
+  category: 侦探
+  url: ''
+  
+推理:
+  typeCode: 92
+  categoryCode: 90
+  category: 侦探
+  url: ''
+  
+乡土:
+  typeCode: 94
+  categoryCode: 93
+  category: 纪实
+  url: ''
+  
+现代:
+  typeCode: 95
+  categoryCode: 93
+  category: 纪实
+  url: ''
+  
+经典:
+  typeCode: 98
+  categoryCode: 97
+  category: 名著
+  url: ''
+  
+短篇:
+  typeCode: 100
+  categoryCode: 97
+  category: 名著
+  url: ''
+  
+哲学:
+  typeCode: 101
+  categoryCode: 97
+  category: 名著
+  url: ''
+  
+诗文:
+  typeCode: 102
+  categoryCode: 97
+  category: 名著
+  url: ''
+  
+教育:
+  typeCode: 106
+  categoryCode: 104
+  category: 其他
+  url: ''
+  
+种田:
+  typeCode: 108
+  categoryCode: 104
+  category: 其他
+  url: ''
+  
+妖女:
+  typeCode: 109
+  categoryCode: 104
+  category: 其他
+  url: ''
+  
+成长:
+  typeCode: 110
+  categoryCode: 104
+  category: 其他
+  url: ''
+  
+其他言情:
+  typeCode: 428
+  categoryCode: 1
+  category: 言情
+  url: ''
+  
+其他玄幻:
+  typeCode: 429
+  categoryCode: 9
+  category: 玄幻
+  url: ''
+  
+其他都市:
+  typeCode: 430
+  categoryCode: 18
+  category: 都市
+  url: ''
+  
+其他轻小说:
+  typeCode: 27
+  categoryCode: 26
+  category: 轻小说
+  url: ''
+  
+其他校园:
+  typeCode: 432
+  categoryCode: 33
+  category: 校园
+  url: ''
+  
+其他历史:
+  typeCode: 433
+  categoryCode: 41
+  category: 历史
+  url: ''
+  
+其他武侠:
+  typeCode: 434
+  categoryCode: 50
+  category: 武侠
+  url: ''
+  
+其他剧情:
+  typeCode: 436
+  categoryCode: 64
+  category: 剧情
+  url: ''
+  
+其他网游:
+  typeCode: 437
+  categoryCode: 69
+  category: 网游
+  url: ''
+  
+其他灵异:
+  typeCode: 439
+  categoryCode: 82
+  category: 灵异
+  url: ''
+  
+其他侦探:
+  typeCode: 440
+  categoryCode: 90
+  category: 侦探
+  url: ''
+  
+其他纪实:
+  typeCode: 441
+  categoryCode: 93
+  category: 纪实
+  url: ''
+  
+其他名著:
+  typeCode: 442
+  categoryCode: 97
+  category: 名著
+  url: ''
+  
+大学:
+  typeCode: 
+  categoryCode: 
+  category: 校园
+  url: ''
+
+全部:
+  typeCode: 500
+  categoryCode: 500
+  category: 全部
+  url: ''
+
+  

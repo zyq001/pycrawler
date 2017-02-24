@@ -1,0 +1,624 @@
+? ''
+: children:
+  - {TypeName: "古典名著", cid: 505}
+  - {TypeName: "现言小说", cid: 508}
+  - {TypeName: "青春文学", cid: 512}
+  - {TypeName: "玄幻小说", cid: 514}
+  - {TypeName: "都市出版", cid: 517}
+  - {TypeName: "历史小说", cid: 523}
+  - {TypeName: "悬疑小说", cid: 529}
+  - {TypeName: "影视小说", cid: 533}
+  - {TypeName: "散文随笔", cid: 535}
+  - {TypeName: "古典诗词", cid: 542}
+  - {TypeName: "名人传记", cid: 546}
+  - {TypeName: "艺术鉴赏", cid: 549}
+  - {TypeName: "教育成长", cid: 552}
+  - {TypeName: "美容美体", cid: 558}
+  - {TypeName: "亲子育儿", cid: 569}
+  - {TypeName: "经营管理", cid: 575}
+  - {TypeName: "人在职场", cid: 582}
+  - {TypeName: "励志", cid: 592}
+  - {TypeName: "哲学", cid: 594}
+  - {TypeName: "医学", cid: 604}
+  - {TypeName: "教材", cid: 612}
+  - {TypeName: "穿越时空", cid: 668}
+  - {TypeName: "幽默笑话", cid: 669}
+  - {TypeName: "末世危机", cid: 671}
+  - {TypeName: "同人耽美", cid: 678}
+  - {TypeName: "唯美故事", cid: 680}
+  - {TypeName: "异界大陆", cid: 682}
+  id: ''
+"世界":
+  children:
+  - {TypeName: "世界名著", cid: 506}
+  id: '506'
+"两性":
+  children:
+  - {TypeName: "两性婚恋", cid: 559}
+  id: '559'
+"乡土":
+  children:
+  - {TypeName: "乡土小说", cid: 522}
+  id: '94'
+"亲子":
+  children:
+  - {TypeName: "亲子育儿", cid: 574}
+  id: '574'
+"人在":
+  children:
+  - {TypeName: "人在职场", cid: 586}
+  id: '586'
+"人际":
+  children:
+  - {TypeName: "人际处世", cid: 587}
+  id: '587'
+"仙侠":
+  children:
+  - {TypeName: "现代修真", cid: 6}
+  - {TypeName: "现代修真", cid: 133}
+  - {TypeName: "古典仙侠", cid: 309}
+  - {TypeName: "奇幻修真", cid: 310}
+  - {TypeName: "洪荒封神", cid: 311}
+  - {TypeName: "其他仙侠", cid: 312}
+  id: '52'
+"休闲":
+  children:
+  - {TypeName: "生活点滴", cid: 142}
+  - {TypeName: "健康饮食", cid: 148}
+  - {TypeName: "生理保健", cid: 149}
+  - {TypeName: "生活点滴", cid: 150}
+  - {TypeName: "网络笑话", cid: 151}
+  - {TypeName: "旅游向导", cid: 152}
+  - {TypeName: "美容瘦身", cid: 153}
+  id: ''
+"会计":
+  children:
+  - {TypeName: "会计财务", cid: 580}
+  id: '580'
+"健康":
+  children:
+  - {TypeName: "健康养生", cid: 563}
+  id: '563'
+"公关":
+  children:
+  - {TypeName: "公关礼仪", cid: 589}
+  id: '589'
+"其他":
+  children:
+  - {TypeName: "外国文学", cid: 37}
+  - {TypeName: "现代文学", cid: 39}
+  - {TypeName: "名家经典", cid: 47}
+  - {TypeName: "影视原著", cid: 48}
+  - {TypeName: "文字剧本", cid: 49}
+  - {TypeName: "真人故事", cid: 120}
+  - {TypeName: "人文史地", cid: 145}
+  - {TypeName: "上班一族", cid: 164}
+  - {TypeName: "散文诗词", cid: 200}
+  - {TypeName: "婚恋心情", cid: 210}
+  - {TypeName: "外国文学", cid: 263}
+  - {TypeName: "其他作品", cid: 267}
+  - {TypeName: "囧人囧事", cid: 295}
+  id: '263'
+"军事":
+  children:
+  - {TypeName: "军旅生活", cid: 32}
+  - {TypeName: "军旅生活", cid: 33}
+  - {TypeName: "军事战争", cid: 34}
+  - {TypeName: "抗日烽火", cid: 35}
+  - {TypeName: "战争幻想", cid: 36}
+  - {TypeName: "谍战特工", cid: 353}
+  - {TypeName: "其他军事", cid: 354}
+  - {TypeName: "军事出版", cid: 525}
+  id: '58'
+"农业":
+  children:
+  - {TypeName: "农业林业", cid: 609}
+  id: '609'
+"出版":
+  children:
+  - {TypeName: "出版其他", cid: 216}
+  - {TypeName: "出版其他", cid: 369}
+  id: ''
+"励志":
+  children:
+  - {TypeName: "励志", cid: 593}
+  id: '593'
+"医学":
+  children:
+  - {TypeName: "医学", cid: 607}
+  id: '607'
+"历史":
+  children:
+  - {TypeName: "历史小说", cid: 524}
+  - {TypeName: "历史", cid: 595}
+  id: '41'
+"原创":
+  children:
+  - {TypeName: "小说", cid: 489}
+  - {TypeName: "小说", cid: 490}
+  - {TypeName: "随笔", cid: 498}
+  id: ''
+"古典":
+  children:
+  - {TypeName: "古典名著", cid: 38}
+  - {TypeName: "古典名著", cid: 507}
+  - {TypeName: "古典诗词", cid: 543}
+  id: ''
+"古籍":
+  children:
+  - {TypeName: "古籍", cid: 596}
+  id: '596'
+"古言":
+  children:
+  - {TypeName: "古言小说", cid: 509}
+  id: '509'
+"同人":
+  children:
+  - {TypeName: "其他同人", cid: 63}
+  - {TypeName: "武侠同人", cid: 327}
+  - {TypeName: "动漫同人", cid: 328}
+  - {TypeName: "影视同人", cid: 329}
+  - {TypeName: "小说同人", cid: 330}
+  - {TypeName: "游戏同人", cid: 331}
+  - {TypeName: "其他同人", cid: 333}
+  - {TypeName: "同人耽美", cid: 734}
+  id: '28'
+"名人":
+  children:
+  - {TypeName: "名人传记", cid: 547}
+  id: '547'
+"名家":
+  children:
+  - {TypeName: "名家文集", cid: 538}
+  id: '538'
+"名著":
+  children:
+  - {TypeName: "国学经典", cid: 189}
+  - {TypeName: "国学经典", cid: 199}
+  - {TypeName: "古典名著", cid: 370}
+  - {TypeName: "古典名著", cid: 372}
+  id: '97'
+"品质":
+  children:
+  - {TypeName: "品质生活", cid: 568}
+  id: '568'
+"哲学":
+  children:
+  - {TypeName: "哲学", cid: 597}
+  id: '101'
+"唯美":
+  children:
+  - {TypeName: "唯美故事", cid: 738}
+  id: '738'
+"城镇":
+  children:
+  - {TypeName: "都市出版", cid: 382}
+  - {TypeName: "都市出版", cid: 383}
+  id: ''
+"外语":
+  children:
+  - {TypeName: "外语", cid: 614}
+  id: '614'
+"奇幻":
+  children:
+  - {TypeName: "西方奇幻", cid: 5}
+  - {TypeName: "西方奇幻", cid: 135}
+  - {TypeName: "魔法校园", cid: 302}
+  - {TypeName: "领主贵族", cid: 303}
+  - {TypeName: "亡灵异族", cid: 304}
+  - {TypeName: "其他奇幻", cid: 305}
+  id: '135'
+"孕产":
+  children:
+  - {TypeName: "孕产知识", cid: 571}
+  id: '571'
+"宗教":
+  children:
+  - {TypeName: "宗教", cid: 598}
+  id: '598'
+"官场":
+  children:
+  - {TypeName: "官场小说", cid: 520}
+  id: '19'
+"家居":
+  children:
+  - {TypeName: "家居装饰", cid: 565}
+  id: '565'
+"寓言":
+  children:
+  - {TypeName: "寓言童话", cid: 554}
+  id: '554'
+"小说":
+  children:
+  - {TypeName: "小说名著", cid: 556}
+  id: '556'
+"工业":
+  children:
+  - {TypeName: "工业技术", cid: 611}
+  id: '611'
+"市场":
+  children:
+  - {TypeName: "市场营销", cid: 579}
+  id: '579'
+"幻情":
+  children:
+  - {TypeName: "幻情小说", cid: 511}
+  id: '511'
+"幻武":
+  children:
+  - {TypeName: "玄幻小说", cid: 379}
+  - {TypeName: "玄幻小说", cid: 380}
+  id: ''
+"幻疑":
+  children:
+  - {TypeName: "恐怖小说", cid: 394}
+  - {TypeName: "悬疑小说", cid: 396}
+  - {TypeName: "恐怖小说", cid: 397}
+  id: ''
+"幼儿":
+  children:
+  - {TypeName: "幼儿启蒙", cid: 570}
+  id: '570'
+"幽默":
+  children:
+  - {TypeName: "幽默笑话", cid: 724}
+  id: '724'
+"建筑":
+  children:
+  - {TypeName: "建筑", cid: 606}
+  id: '606'
+"异界":
+  children:
+  - {TypeName: "异界大陆", cid: 740}
+  id: '74'
+"影视":
+  children:
+  - {TypeName: "影视小说", cid: 398}
+  - {TypeName: "影视小说", cid: 399}
+  - {TypeName: "影视小说", cid: 534}
+  id: ''
+"心性":
+  children:
+  - {TypeName: "心性修养", cid: 584}
+  id: '584'
+"心理":
+  children:
+  - {TypeName: "心理学", cid: 601}
+  id: '601'
+"恐怖":
+  children:
+  - {TypeName: "恐怖小说", cid: 532}
+  id: '532'
+"悬疑":
+  children:
+  - {TypeName: "悬疑小说", cid: 531}
+  id: '90'
+"情感":
+  children:
+  - {TypeName: "现言小说", cid: 373}
+  - {TypeName: "古言小说", cid: 374}
+  - {TypeName: "现言小说", cid: 375}
+  id: ''
+"戏剧":
+  children:
+  - {TypeName: "戏剧戏曲", cid: 545}
+  id: '545'
+"成功":
+  children:
+  - {TypeName: "人在职场", cid: 447}
+  - {TypeName: "人在职场", cid: 451}
+  - {TypeName: "成功法则", cid: 583}
+  id: ''
+"投资":
+  children:
+  - {TypeName: "投资理财", cid: 577}
+  id: '577'
+"推理":
+  children:
+  - {TypeName: "推理小说", cid: 42}
+  id: '90'
+"政治":
+  children:
+  - {TypeName: "政治军事", cid: 603}
+  id: '603'
+"教材":
+  children:
+  - {TypeName: "教材", cid: 613}
+  id: '613'
+"教育":
+  children:
+  - {TypeName: "教育成长", cid: 553}
+  id: '90'
+"教辅":
+  children:
+  - {TypeName: "教辅", cid: 616}
+  id: '616'
+"散文":
+  children:
+  - {TypeName: "散文随笔", cid: 539}
+  id: '539'
+"文化":
+  children:
+  - {TypeName: "文化", cid: 599}
+  id: '599'
+"文学":
+  children:
+  - {TypeName: "文学理论", cid: 536}
+  id: '536'
+"旅游":
+  children:
+  - {TypeName: "旅游地理", cid: 562}
+  id: '562'
+"时尚":
+  children:
+  - {TypeName: "时尚娱乐", cid: 560}
+  id: '560'
+"智商":
+  children:
+  - {TypeName: "智商财商", cid: 590}
+  id: '590'
+"末世":
+  children:
+  - {TypeName: "末世危机", cid: 727}
+  id: '74'
+"架空":
+  children:
+  - {TypeName: "架空历史", cid: 7}
+  - {TypeName: "架空历史", cid: 125}
+  - {TypeName: "人物传记", cid: 197}
+  - {TypeName: "上古先秦", cid: 265}
+  - {TypeName: "秦汉三国", cid: 268}
+  - {TypeName: "两晋隋唐", cid: 269}
+  - {TypeName: "五代十国", cid: 270}
+  - {TypeName: "两宋元明", cid: 271}
+  - {TypeName: "清史民国", cid: 272}
+  - {TypeName: "历史传记", cid: 273}
+  - {TypeName: "古代典籍", cid: 276}
+  - {TypeName: "其他历史", cid: 278}
+  id: '41'
+"校园":
+  children:
+  - {TypeName: "青春校园", cid: 18}
+  - {TypeName: "青春校园", cid: 319}
+  - {TypeName: "青春年华", cid: 320}
+  - {TypeName: "校园风云", cid: 321}
+  - {TypeName: "校园异能", cid: 322}
+  - {TypeName: "青春疼痛", cid: 323}
+  - {TypeName: "黑街极道", cid: 324}
+  - {TypeName: "校园魔幻", cid: 325}
+  - {TypeName: "其他校园", cid: 326}
+  - {TypeName: "青春文学", cid: 377}
+  - {TypeName: "青春文学", cid: 378}
+  id: '33'
+"武侠":
+  children:
+  - {TypeName: "武侠小说", cid: 8}
+  - {TypeName: "幻武异侠", cid: 348}
+  - {TypeName: "传统武侠", cid: 349}
+  - {TypeName: "国术武技", cid: 350}
+  - {TypeName: "新派武侠", cid: 351}
+  - {TypeName: "其他武侠", cid: 352}
+  - {TypeName: "武侠小说", cid: 516}
+  id: '50'
+"母婴":
+  children:
+  - {TypeName: "母婴喂养", cid: 573}
+  id: '573'
+"民间":
+  children:
+  - {TypeName: "民间文学", cid: 541}
+  id: '541'
+"法律":
+  children:
+  - {TypeName: "法律", cid: 600}
+  id: '600'
+"游戏":
+  children:
+  - {TypeName: "游戏竞技", cid: 40}
+  - {TypeName: "虚拟网游", cid: 364}
+  - {TypeName: "游戏人生", cid: 365}
+  - {TypeName: "游戏异界", cid: 366}
+  - {TypeName: "电子竞技", cid: 367}
+  - {TypeName: "其他游戏", cid: 368}
+  id: '69'
+"演讲":
+  children:
+  - {TypeName: "演讲口才", cid: 588}
+  id: '588'
+"灵异":
+  children:
+  - {TypeName: "灵异推理", cid: 41}
+  - {TypeName: "灵异鬼怪", cid: 313}
+  - {TypeName: "恐怖惊悚", cid: 314}
+  - {TypeName: "侦探推理", cid: 315}
+  - {TypeName: "悬疑探险", cid: 316}
+  - {TypeName: "神秘文化", cid: 317}
+  - {TypeName: "其他灵异", cid: 318}
+  - {TypeName: "灵异推理", cid: 502}
+  id: '82'
+"烹饪":
+  children:
+  - {TypeName: "烹饪美食", cid: 566}
+  id: '566'
+"玄幻":
+  children:
+  - {TypeName: "异界大陆", cid: 1}
+  - {TypeName: "东方玄幻", cid: 2}
+  - {TypeName: "转世重生", cid: 3}
+  - {TypeName: "异界大陆", cid: 4}
+  - {TypeName: "异界争霸", cid: 345}
+  - {TypeName: "远古神话", cid: 346}
+  - {TypeName: "其他玄幻", cid: 347}
+  - {TypeName: "玄幻小说", cid: 515}
+  id: '9'
+"现代":
+  children:
+  - {TypeName: "现代诗词", cid: 544}
+  id: '93'
+"现言":
+  children:
+  - {TypeName: "现言小说", cid: 510}
+  id: '510'
+"电子":
+  children:
+  - {TypeName: "电子商务", cid: 581}
+  id: '581'
+"社会":
+  children:
+  - {TypeName: "社会小说", cid: 521}
+  - {TypeName: "社会科学", cid: 602}
+  id: '521'
+"科幻":
+  children:
+  - {TypeName: "科幻小说", cid: 62}
+  - {TypeName: "未来世界", cid: 355}
+  - {TypeName: "时空穿梭", cid: 356}
+  - {TypeName: "科技时代", cid: 357}
+  - {TypeName: "古武机甲", cid: 358}
+  - {TypeName: "星际战争", cid: 360}
+  - {TypeName: "进化变异", cid: 361}
+  - {TypeName: "末世危机", cid: 362}
+  - {TypeName: "其他科幻", cid: 363}
+  - {TypeName: "科幻出版", cid: 530}
+  id: '74'
+"科普":
+  children:
+  - {TypeName: "科普百科", cid: 557}
+  - {TypeName: "科普读物", cid: 605}
+  id: '557'
+"穿越":
+  children:
+  - {TypeName: "穿越时空", cid: 722}
+  id: '444'
+"竞技":
+  children:
+  - {TypeName: "球类运动", cid: 12}
+  - {TypeName: "球类运动", cid: 15}
+  - {TypeName: "体坛竞技", cid: 16}
+  - {TypeName: "其他竞技", cid: 17}
+  id: '69'
+"纪实":
+  children:
+  - {TypeName: "纪实文学", cid: 540}
+  id: '93'
+"经营":
+  children:
+  - {TypeName: "经营管理", cid: 578}
+  id: '578'
+"综合":
+  children:
+  - {TypeName: "幽默笑话", cid: 54}
+  - {TypeName: "教育科技", cid: 55}
+  - {TypeName: "幽默笑话", cid: 57}
+  - {TypeName: "法律法规", cid: 60}
+  - {TypeName: "诗歌散文", cid: 61}
+  - {TypeName: "经济管理", cid: 143}
+  - {TypeName: "智慧哲学", cid: 147}
+  id: ''
+"美容":
+  children:
+  - {TypeName: "美容美体", cid: 564}
+  id: '564'
+"考试":
+  children:
+  - {TypeName: "考试", cid: 615}
+  id: '615'
+"耽美":
+  children:
+  - {TypeName: "现代耽美", cid: 124}
+  - {TypeName: "现代耽美", cid: 238}
+  - {TypeName: "古代耽美", cid: 239}
+  - {TypeName: "幻想耽美", cid: 240}
+  - {TypeName: "架空耽美", cid: 241}
+  - {TypeName: "同人耽美", cid: 243}
+  id: '238'
+"职场":
+  children:
+  - {TypeName: "赚钱理财", cid: 59}
+  - {TypeName: "白领系列", cid: 127}
+  - {TypeName: "白领系列", cid: 128}
+  - {TypeName: "自我励志", cid: 129}
+  - {TypeName: "成功传记", cid: 130}
+  - {TypeName: "职场小说", cid: 519}
+  id: '18'
+"胎教":
+  children:
+  - {TypeName: "胎教早教", cid: 572}
+  id: '572'
+"自然":
+  children:
+  - {TypeName: "自然科学", cid: 610}
+  id: '610'
+"艺术":
+  children:
+  - {TypeName: "艺术理论", cid: 550}
+  - {TypeName: "艺术鉴赏", cid: 551}
+  id: '550'
+"言情":
+  children:
+  - {TypeName: "穿越时空", cid: 0}
+  - {TypeName: "穿越时空", cid: 19}
+  - {TypeName: "古代言情", cid: 20}
+  - {TypeName: "现代言情", cid: 21}
+  - {TypeName: "穿越时空", cid: 22}
+  - {TypeName: "幻想言情", cid: 224}
+  - {TypeName: "民国情缘", cid: 245}
+  - {TypeName: "豪门世家", cid: 246}
+  - {TypeName: "都市高干", cid: 247}
+  - {TypeName: "西方罗曼", cid: 248}
+  - {TypeName: "唯美童话", cid: 250}
+  - {TypeName: "秘密情话", cid: 251}
+  - {TypeName: "古典架空", cid: 252}
+  - {TypeName: "女尊天下", cid: 253}
+  - {TypeName: "宫斗宅斗", cid: 254}
+  - {TypeName: "江湖奇缘", cid: 255}
+  - {TypeName: "末日情缘", cid: 256}
+  - {TypeName: "未来幻想", cid: 257}
+  - {TypeName: "星际恋歌", cid: 258}
+  - {TypeName: "仙侣奇缘", cid: 259}
+  - {TypeName: "情仇爱恨", cid: 260}
+  - {TypeName: "悲情虐文", cid: 261}
+  - {TypeName: "其他言情", cid: 262}
+  id: '1'
+"评论":
+  children:
+  - {TypeName: "评论鉴赏", cid: 537}
+  id: '537'
+"运动":
+  children:
+  - {TypeName: "运动休闲", cid: 567}
+  id: '567'
+"都市":
+  children:
+  - {TypeName: "都市生活", cid: 51}
+  - {TypeName: "极道江湖", cid: 52}
+  - {TypeName: "官场沉浮", cid: 53}
+  - {TypeName: "都市生活", cid: 121}
+  - {TypeName: "都市异能", cid: 122}
+  - {TypeName: "都市重生", cid: 334}
+  - {TypeName: "乡村乡土", cid: 335}
+  - {TypeName: "社会百态", cid: 336}
+  - {TypeName: "都市情感", cid: 337}
+  - {TypeName: "都市人生", cid: 338}
+  - {TypeName: "都市热血", cid: 339}
+  - {TypeName: "商战风云", cid: 340}
+  - {TypeName: "娱乐明星", cid: 341}
+  - {TypeName: "职场励志", cid: 342}
+  - {TypeName: "都市婚姻", cid: 343}
+  - {TypeName: "其他都市", cid: 344}
+  - {TypeName: "都市出版", cid: 518}
+  - {TypeName: "都市爱情", cid: 720}
+  id: '18'
+"金融":
+  children:
+  - {TypeName: "金融经济", cid: 576}
+  id: '576'
+"青春":
+  children:
+  - {TypeName: "青春文学", cid: 513}
+  - {TypeName: "青春校园", cid: 723}
+  id: '33'
+"风水":
+  children:
+  - {TypeName: "风水占卜", cid: 561}
+  id: '82'
