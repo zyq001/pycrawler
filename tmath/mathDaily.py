@@ -283,7 +283,8 @@ def koolearn(muluUrl, stage):
                 pps = moreContentDiv.select('p')
                 for ci in range(0, len(pps)):
                     if  pps[ci].select('a') :
-                        print 'has link ,extract, link:',unicode(pps[ci]),' contentUrl:',cUrl
+                        # print 'has link ,extract, link:',unicode(pps[ci]),' contentUrl:',cUrl
+                        print 'has link ,extract, link2:'
                         pps[ci].extract()
 
                     if ci in [len(pps) - 1, len(pps) - 2, len(pps) - 3] and (u'新东方' in pps[ci].get_text() or
