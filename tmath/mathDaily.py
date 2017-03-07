@@ -246,62 +246,14 @@ def koolearn(muluUrl, stage):
             desc = descTag.get_text()
 
             tags = pageLi.select_one('.c_lv')['title']
-            ntype = tags
+            ntype = tags#从标签中选择一个具有代表性的作为类型，一般为第二个
             if len(tags) > 3:
                 ts = tags.split(' ')
                 if len(ts) > 2:
                     ntype = ts[1]
             contentUrl = pageLi.select_one('h3 a')['href']
-            detailHtmlContent = getContentWithUA(contentUrl,defaultPCUa)
-            detailContentSoup = getSoupByStr(detailHtmlContent)
-            detailContent = ''
-            contentDiv = detailContentSoup.select_one('.show_l2 .mt40')
-            contentDiv.select('p')[0].extract()# 第一个p标签为介绍，删掉
-            cps = contentDiv.select('p')
-            for ci in range(0,len(cps)):
-                if  cps[ci].select('a'):
-                    print 'has link ,extract,  contentUrl:'
-                    cps[ci].extract()
 
-                if ci in [len(cps) - 1, len(cps) - 2, len(cps) - 3] and (u'新东方' in cps[ci].get_text() or
-                                                                                 u'来源' in cps[ci].get_text()):
-                    for cc in range(ci, len(cps)):
-                        cps[cc].extract()
-                    break
-            detailContent = detailContent + unicode(contentDiv)
-
-            # 如果有分页，不算最后一个回链页
-            for page in range(2,6):
-                cUrl = contentUrl.replace('.html','_' + str(page) + '.html')
-                moreContentHtmlContent = getContentWithUA(cUrl,defaultPCUa)
-                if not moreContentHtmlContent:
-                    print 'no more content, ',cUrl
-                    break
-                moreContentSoup = getSoupByStr(moreContentHtmlContent)
-                #去掉最后两个p
-                moreContentDiv = moreContentSoup.select_one('.show_l2 .mt40')
-                pps = moreContentDiv.select('p')
-                for ci in range(0, len(pps)):
-                    if  pps[ci].select('a') :
-                        # print 'has link ,extract, link:',unicode(pps[ci]),' contentUrl:',cUrl
-                        print 'has link ,extract, link2:'
-                        pps[ci].extract()
-
-                    if ci in [len(pps) - 1, len(pps) - 2, len(pps) - 3] and (u'新东方' in pps[ci].get_text() or
-                                                                                     u'来源' in pps[ci].get_text()):
-                        for cc in range(ci, len(pps)):
-                            pps[cc].extract()
-                        break
-                # pps[len(pps) - 1].extract()
-                # pps[len(pps) - 2].extract()
-                detailContent = detailContent + unicode(moreContentDiv)
-
-            #入库
-            csor.execute('insert ignore into daily_news (name,type,content,stage,author,tag,contentUrl,description) VALUES (%s,'
-                         '%s,%s,%s,%s,%s,%s,%s)', (title,ntype, detailContent
-                                                   .replace(u'新东方在线论坛','').replace(u'相关链接：','').replace(u'来源：新东方在线论坛','')
-                                                                        , stage, u'新东方', tags,contentUrl,desc))
-            conn.commit()
+            kooleanStartByContentUrl(conn, contentUrl, csor, desc, ntype, stage, tags, title)
         except Exception as ee:
             print traceback.format_exc()
 
@@ -312,14 +264,72 @@ def koolearn(muluUrl, stage):
     koolearn(urlparse.urljoin(muluUrl,nextUrl),stage)
 
 
+def kooleanStartByContentUrl(conn, contentUrl, csor, desc='', ntype='', stage='', tags='', title=''):
+    detailHtmlContent = getContentWithUA(contentUrl, defaultPCUa)
+    detailContentSoup = getSoupByStr(detailHtmlContent)
+    detailContent = ''
+    contentDiv = detailContentSoup.select_one('.show_l2 .mt40')
+    contentDiv.select('p')[0].extract()  # 第一个p标签为介绍，删掉
+    cps = contentDiv.select('p')
+    for ci in range(0, len(cps)):
+        if cps[ci].select('a'):
+            print 'has link ,extract,  contentUrl:'
+            cps[ci].extract()
 
+        if ci in [len(cps) - 1, len(cps) - 2, len(cps) - 3] and (u'新东方' in cps[ci].get_text() or
+                                                                         u'来源' in cps[ci].get_text()):
+            for cc in range(ci, len(cps)):
+                cps[cc].extract()
+            break
+    detailContent = detailContent + unicode(contentDiv)
+    # 如果有分页，不算最后一个回链页
+    for page in range(2, 100):
+        cUrl = contentUrl.replace('.html', '_' + str(page) + '.html')
+        moreContentHtmlContent = getContentWithUA(cUrl, defaultPCUa)
+        if not moreContentHtmlContent:
+            print 'no more content, ', cUrl
+            break
+        moreContentSoup = getSoupByStr(moreContentHtmlContent)
+        # 去掉最后两个p
+        moreContentDiv = moreContentSoup.select_one('.show_l2 .mt40')
+        pps = moreContentDiv.select('p')
+        for ci in range(0, len(pps)):
+            if pps[ci].select('a'):
+                # print 'has link ,extract, link:',unicode(pps[ci]),' contentUrl:',cUrl
+                print 'has link ,extract, link2:'
+                pps[ci].extract()
+
+            if ci in [len(pps) - 1, len(pps) - 2, len(pps) - 3] and (u'新东方' in pps[ci].get_text() or
+                                                                             u'来源' in pps[ci].get_text()):
+                for cc in range(ci, len(pps)):
+                    pps[cc].extract()
+                break
+        # pps[len(pps) - 1].extract()
+        # pps[len(pps) - 2].extract()
+        detailContent = detailContent + unicode(moreContentDiv)
+
+    # 入库
+    csor.execute('insert ignore into daily_news (name,type,content,stage,author,tag,contentUrl,description) VALUES (%s,'
+                 '%s,%s,%s,%s,%s,%s,%s)', (title, ntype, detailContent
+                                           .replace(u'新东方在线论坛', '').replace(u'相关链接：', '').replace(u'来源：新东方在线论坛', '')
+                                           , stage, u'新东方', tags, contentUrl, desc))
+    conn.commit()
 
 
 if __name__ == '__main__':
     # juren()
     # today()
-    koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
-    koolearn('http://gaokao.koolearn.com/shuxue/gongshi/', u'高中')
-    koolearn('http://zhongkao.koolearn.com/shuxue/zhidao/', u'初中')
-    koolearn('http://gaokao.koolearn.com/shuxue/zhidao/', u'高中')
-    koolearn('http://gaokao.koolearn.com/shuxue/yazhouti/', u'高中')
+    # koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
+    # koolearn('http://gaokao.koolearn.com/shuxue/gongshi/', u'高中')
+    # koolearn('http://zhongkao.koolearn.com/shuxue/zhidao/', u'初中')
+    # koolearn('http://gaokao.koolearn.com/shuxue/zhidao/', u'高中')
+    # koolearn('http://gaokao.koolearn.com/shuxue/yazhouti/', u'高中')
+
+    global conn,csor
+    if not conn or (not csor):
+        conn,csor = getTmathConnCsor()
+
+    kooleanStartByContentUrl(conn, 'http://gaokao.koolearn.com/20170122/1083056.html', csor,
+                             desc=u'2017高考数学99个高频考点公式',
+                             title=u'2017高考数学99个高频考点公式',
+                             tags=u'2017高考数学 数学公式',stage=u'高中',ntype=u'数学公式')
