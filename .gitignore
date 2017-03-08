@@ -16,3 +16,4 @@ redisHandle/.DS_Store
 Config.py
 .DS_Store
 /phantomjs-2.1.1-macosx/
+*.pyc

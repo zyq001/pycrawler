@@ -51,4 +51,4 @@ if __name__ == '__main__':
     dbName = 'daily_today'
     contentName = 'content'
     baseUrl = 'http://www.todayonhistory.com/'
-    startWithConn(conn,csor,dbName,contentName,baseUrl,begid=500)
+    startWithConn(conn,csor,dbName,contentName,baseUrl,begid=3500)
