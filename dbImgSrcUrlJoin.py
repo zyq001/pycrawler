@@ -16,6 +16,19 @@ def handleHtml(baseUrl,htmlContent):
             modfied = True
     return unicode(soup),modfied
 
+def cleanHtml(htmlContent):
+    soup = getSoupByStr(htmlContent)
+    modfied = False
+    [a.unwrap() for a in soup.select('a')]
+
+    for img in soup.select('img'):
+        if not img.has_key('style') or len(img['style']) < 1:
+            img['style'] = 'max-width:100%'
+        else:
+            img['style'] = img['style'] + ';max-width:100%'
+        modfied = True
+    return unicode(soup),modfied
+
 def startWithConn(conn, csor,dbName,contentName,baseUrl,carry = 500, begid = -1):
     endId = begid + carry
     updateSql = 'update ' + dbName + ' set ' + contentName + ' = %s where id = %s '
@@ -35,10 +48,12 @@ def startWithConn(conn, csor,dbName,contentName,baseUrl,carry = 500, begid = -1)
         for rec in res:
             id = rec[0]
             contentHtml = rec[1]
-            newContent,mod = handleHtml(baseUrl,contentHtml)
+            # newContent,mod = handleHtml(baseUrl,contentHtml)
+            newContent,mod = cleanHtml(contentHtml)
             if not mod:
                 continue
             csor.execute(updateSql,(newContent,id))
+            conn.commit()
 
         if endId == count:
             break
@@ -53,4 +68,4 @@ if __name__ == '__main__':
     dbName = 'daily_today'
     contentName = 'content'
     baseUrl = 'http://www.todayonhistory.com/'
-    startWithConn(conn,csor,dbName,contentName,baseUrl,begid=3500)
+    startWithConn(conn,csor,dbName,contentName,baseUrl,begid=0)
