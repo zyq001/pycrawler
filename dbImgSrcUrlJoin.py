@@ -19,6 +19,7 @@ def handleHtml(baseUrl,htmlContent):
 def startWithConn(conn, csor,dbName,contentName,baseUrl,carry = 500, begid = -1):
     endId = begid + carry
     updateSql = 'update ' + dbName + ' set ' + contentName + ' = %s where id = %s '
+    print updateSql
 
     csor.execute('select id from ' + dbName + ' order by id desc limit 1')
     count = csor.fetchone()[0]
@@ -27,6 +28,7 @@ def startWithConn(conn, csor,dbName,contentName,baseUrl,carry = 500, begid = -1)
     while endId < count + 1:
 
         sql = 'select id, ' + contentName + ' from ' + dbName + ' where id > ' + str(begid) + ' and id <= ' + str(endId)
+        print 'sql:',sql
         csor.execute(sql)
         conn.commit()
         res = csor.fetchall()
