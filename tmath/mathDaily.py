@@ -309,9 +309,12 @@ def kooleanStartByContentUrl(conn, contentUrl, csor, desc='', ntype='', stage=''
         detailContent = detailContent + unicode(moreContentDiv)
 
     # 入库
-    csor.execute('insert ignore into daily_news (name,type,content,stage,author,tag,contentUrl,description) VALUES (%s,'
+    csor.execute('insert ignore into daily_news_copy (name,type,content,stage,author,tag,contentUrl,description) VALUES (%s,'
                  '%s,%s,%s,%s,%s,%s,%s)', (title, ntype, detailContent
-                                           .replace(u'新东方在线论坛', '').replace(u'相关链接：', '').replace(u'来源：新东方在线论坛', '')
+                                           .replace(u'新东方在线论坛', '').replace(u'相关链接：', '')
+                                           .replace(u'来源：新东方在线论坛', '')
+                                           .replace(u'新东方在线', '')
+                                           .replace(u'新东方', '')
                                            , stage, u'新东方', tags, contentUrl, desc))
     conn.commit()
 
@@ -319,17 +322,21 @@ def kooleanStartByContentUrl(conn, contentUrl, csor, desc='', ntype='', stage=''
 if __name__ == '__main__':
     # juren()
     # today()
-    # koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
-    # koolearn('http://gaokao.koolearn.com/shuxue/gongshi/', u'高中')
-    # koolearn('http://zhongkao.koolearn.com/shuxue/zhidao/', u'初中')
-    # koolearn('http://gaokao.koolearn.com/shuxue/zhidao/', u'高中')
-    # koolearn('http://gaokao.koolearn.com/shuxue/yazhouti/', u'高中')
+    koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
+    koolearn('http://gaokao.koolearn.com/shuxue/gongshi/', u'高中')
+    koolearn('http://zhongkao.koolearn.com/shuxue/zhidao/', u'初中')
+    koolearn('http://gaokao.koolearn.com/shuxue/zhidao/', u'高中')
+    koolearn('http://gaokao.koolearn.com/shuxue/yazhouti/', u'高中')
 
-    global conn,csor
-    if not conn or (not csor):
-        conn,csor = getTmathConnCsor()
+    # global conn,csor
+    # if not conn or (not csor):
+    #     conn,csor = getTmathConnCsor()
 
-    kooleanStartByContentUrl(conn, 'http://gaokao.koolearn.com/20170122/1083056.html', csor,
-                             desc=u'2017高考数学99个高频考点公式',
-                             title=u'2017高考数学99个高频考点公式',
-                             tags=u'2017高考数学 数学公式',stage=u'高中',ntype=u'数学公式')
+    # kooleanStartByContentUrl(conn, 'http://gaokao.koolearn.com/20170122/1083056.html', csor,
+    #                          desc=u'2017高考数学99个高频考点公式',
+    #                          title=u'2017高考数学99个高频考点公式',
+    #                          tags=u'2017高考数学 数学公式',stage=u'高中',ntype=u'数学公式')
+    # kooleanStartByContentUrl(conn, 'http://gaokao.koolearn.com/20161109/1002921.html', csor,
+    #                          desc=u'高考数学三解函数是重点，小编整理了《2017高考数学：三角函数公式汇总》，希望对考生们有所帮助!',
+    #                          title=u'2017高考数学：三角函数公式汇总',
+    #                          tags=u'2017高考数学 三角函数公式',stage=u'高中',ntype=u'数学公式')

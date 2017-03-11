@@ -25,7 +25,12 @@ def cleanHtml(htmlContent):
         if not img.has_key('style') or len(img['style']) < 1:
             img['style'] = 'max-width:100%'
         else:
-            img['style'] = img['style'] + ';max-width:100%'
+            preStyle = img['style']
+            if preStyle.endswith(';'):
+                img['style'] = img['style'] + 'max-width:100%;'
+            else:
+                img['style'] = img['style'] + ';max-width:100%'
+
         modfied = True
     return unicode(soup),modfied
 
@@ -65,7 +70,8 @@ def startWithConn(conn, csor,dbName,contentName,baseUrl,carry = 500, begid = -1)
 
 if __name__ == '__main__':
     conn,csor = getTmathConnCsor()
-    dbName = 'daily_today'
+    # dbName = 'daily_today'
+    dbName = 'daily_news'
     contentName = 'content'
     baseUrl = 'http://www.todayonhistory.com/'
     startWithConn(conn,csor,dbName,contentName,baseUrl,begid=0)
