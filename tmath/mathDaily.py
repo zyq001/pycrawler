@@ -306,6 +306,18 @@ def kooleanStartByContentUrl(conn, contentUrl, csor, desc='', ntype='', stage=''
                 break
         # pps[len(pps) - 1].extract()
         # pps[len(pps) - 2].extract()
+
+        [a.unwrap() for a in moreContentDiv.select('a')]
+        for img in moreContentDiv.select('img'):
+            if not img.has_key('style') or len(img['style']) < 1:
+                img['style'] = 'max-width:100%'
+            else:
+                preStyle = img['style']
+                if preStyle.endswith(';'):
+                    img['style'] = img['style'] + 'max-width:100%;'
+                else:
+                    img['style'] = img['style'] + ';max-width:100%'
+
         detailContent = detailContent + unicode(moreContentDiv)
 
     # 入库
