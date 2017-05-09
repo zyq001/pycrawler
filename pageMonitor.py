@@ -154,11 +154,11 @@ def startFromYml():
                     InsertContentByUrl(site,tagStr)
                     continue
 
-                sendEmail(tagStr, forTagStr, site)
+                # sendEmail(tagStr, forTagStr, site)
 
                 if forTagStr != tagStr:
                     sendEmail(tagStr, forTagStr, site)
-                else:
+                # else:
                     UpdateContentByUrl(site,tagStr)
         time.sleep(60 * 2)
 
