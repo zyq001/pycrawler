@@ -334,7 +334,7 @@ def kooleanStartByContentUrl(conn, contentUrl, csor, desc='', ntype='', stage=''
 if __name__ == '__main__':
     # juren()
     # today()
-    koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
+    # koolearn('http://xiaoxue.koolearn.com/xiaoshengchu/xscfd/shuxue/', u'小学')
     koolearn('http://gaokao.koolearn.com/shuxue/gongshi/', u'高中')
     koolearn('http://zhongkao.koolearn.com/shuxue/zhidao/', u'初中')
     koolearn('http://gaokao.koolearn.com/shuxue/zhidao/', u'高中')

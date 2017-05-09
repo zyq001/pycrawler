@@ -17,3 +17,4 @@ Config.py
 .DS_Store
 /phantomjs-2.1.1-macosx/
 *.pyc
+*.json

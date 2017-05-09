@@ -5,7 +5,7 @@ import time
 from email.header import Header
 from email.mime.text import MIMEText
 
-from Config import MAILPASS, NO_REPLY_TATATIMES_COM, SMTP_EXMAIL_QQ_COM, ZYQ_TATATIMES_COM, MANAGER_TATATIMES_COM, \
+from Config import MAILPASS, NO_REPLY_TATATIMES_COM, SMTP_EXMAIL_QQ_COM, receivers, MANAGER_TATATIMES_COM, \
     NOREPLAYEMAIL
 from networkHelper import getERAConn, getEADConn
 
@@ -153,7 +153,7 @@ def send(msg):
     mail_pass= MAILPASS  #口令
 
     sender = NOREPLAYEMAIL
-    receivers = [MANAGER_TATATIMES_COM, ZYQ_TATATIMES_COM]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    receivers = [MANAGER_TATATIMES_COM, receivers]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
 
 

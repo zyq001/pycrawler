@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Config import ERAHOST, ERAPASSWD, EADHOST, EADPASSWD
+import random
+
+from Config import ERAHOST, ERAPASSWD, EADHOST, EADPASSWD, USER_AGENTS
 
 
 def getContent(url):
@@ -25,14 +27,17 @@ def getContent(url):
 
     return None
 
-def getContentWithUA(url, ua, proxy=None):
+def getContentWithUA(url, ua = None, proxy=None,headers = None):
 
+    if not ua:
+        ua = random.choice(USER_AGENTS)
     import requests
     s = requests.Session()
-    headers = {u'user-agent': ua}
-
+    header = {u'user-agent': ua}
+    if not headers:
+        header.update(headers)
     try:
-        r = s.get(url, headers=headers, timeout=60, proxies = proxy)
+        r = s.get(url, headers=header, timeout=60, proxies = proxy)
         if r.status_code == 200:
             if r.encoding is None or r.encoding == 'ISO-8859-1':
                 if r.apparent_encoding == 'GB2312':

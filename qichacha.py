@@ -25,7 +25,7 @@ staticInsertCarry = 100
 
 from selenium.webdriver.phantomjs import webdriver
 
-from Config import phantomPath, USER_AGENTS, minPIPCount
+from Config import phantomPath, USER_AGENTS, minPIPCount, DAVIDPASSWD
 from framework.config import getBloom, loadBloomFromFile, dumpBloomToFile
 from framework.htmlParser import getSoupByStrEncode
 from proxy.ipproxy import getAvailableIPs, deletByIP
@@ -39,11 +39,62 @@ investBloom = []
 conn = None
 csor = None
 
+globalProxyCount = 0
+pIPs = getAvailableIPs()
+pipObj = random.choice(pIPs)
+def getProxy(renew = False):
+    global pIPs, globalProxyCount,pipObj
+    # while 1:
+    try:
+        # count = 100
+        if len(pIPs) < minPIPCount:
+            # 代理ip太少，重新获取
+            pIPs = getAvailableIPs()
+        globalProxyCount = globalProxyCount + 1
+        if globalProxyCount % 100 == 0 or renew:
+            pipObj = random.choice(pIPs)
+            print 'globalProxyCount:',str(globalProxyCount), ' change proxyIp to ',str(pipObj)
+            pIPs.remove(pipObj)
+            globalProxyCount = 0
+
+        # randomPIpIndex = random.randint(0, len(pIPs) - 1)
+        # pipObj = pIPs[randomPIpIndex]
+        pIp = pipObj[0]
+        pPort = pipObj[1]
+
+        # del pIPs[randomPIpIndex]
+        # pIPs.remove(pipObj)
+
+        # 删除ip
+        # deletByIP(pIp)
+        proxy = {
+            'http': 'http://%s:%s' % (pIp, pPort),
+            'https': 'http://%s:%s' % (pIp, pPort)
+        }
+        return proxy
+    except Exception as e:
+        print 'get proxy exception: ',e
+
+
 def getQichachaHtml(url, proxy=None):
-    cookies = {'PHPSESSID':'bhtvcmlegu7r8helh07sm85j87'}
+    cookies = {'PHPSESSID':'78llsj0nbd58n7acsf98jqjre2'}
+
+    if not proxy:
+        proxy = getProxy()
 
     s = requests.Session()
-    r = s.get(url, timeout=30, cookies=cookies,proxies=proxy)
+    try:
+        r = s.get(url, timeout=30, cookies=cookies,proxies=proxy)
+    except Exception as e:
+        print 'get with proxy error, retry with'
+        proxy = getProxy(True)
+
+        try:
+            r = s.get(url, timeout=30, cookies=cookies, proxies=proxy)
+        except Exception as e:
+            print 'get with proxy error, return none'
+            return None
+
     if r.status_code == 200:
         if r.encoding is None or r.encoding == 'ISO-8859-1':
             if r.apparent_encoding == 'GB2312':
@@ -527,11 +578,11 @@ if __name__ == '__main__':
     #         provs.append(p)
     #         print 'doneProv,',p
 
-    idBloom = getQichachaDigests()
+    # idBloom = getQichachaDigests()
 
     # investBloom = getQichachaInvestDigests()
 
-    # qichachaFromProvs(provs)
+    qichachaFromProvs(provs)
     #
     # f = 0
     # t = 19
@@ -553,41 +604,42 @@ if __name__ == '__main__':
     #             print 'job fail, e:',traceback.format_exc()
 
     # 页面推荐入口
-    pIPs = getAvailableIPs()
+    # pIPs = getAvailableIPs()
+    #
+    # while 1:
+    #     try:
+    #         count = 100
+    #         if len(pIPs) < minPIPCount:
+    #             # 代理ip太少，重新获取
+    #             pIPs = getAvailableIPs()
+    #         pipObj = random.choice(pIPs)
+    #         # randomPIpIndex = random.randint(0, len(pIPs) - 1)
+    #         # pipObj = pIPs[randomPIpIndex]
+    #         pIp = pipObj[0]
+    #         pPort = pipObj[1]
+    #
+    #         # del pIPs[randomPIpIndex]
+    #         pIPs.remove(pipObj)
+    #
+    #         # 删除ip
+    #         # deletByIP(pIp)
+    #         proxy = {
+    #             'http': 'http://%s:%s' % (pIp, pPort),
+    #             'https': 'http://%s:%s' % (pIp, pPort)
+    #         }
+    #         try:
+    #             while count > 0:
+    #                 if not searchAndCrawlByName("noName", proxy=proxy):
+    #                     break
+    #                 count = count - 1
+    #         except Exception as e:
+    #             print traceback.format_exc()
+    #
+    #     except Exception as ge:
+    #         print traceback.format_exc()
 
-    while 1:
-        try:
-            count = 100
-            if len(pIPs) < minPIPCount:
-                # 代理ip太少，重新获取
-                pIPs = getAvailableIPs()
-            pipObj = random.choice(pIPs)
-            # randomPIpIndex = random.randint(0, len(pIPs) - 1)
-            # pipObj = pIPs[randomPIpIndex]
-            pIp = pipObj[0]
-            pPort = pipObj[1]
 
-            # del pIPs[randomPIpIndex]
-            pIPs.remove(pipObj)
-
-            # 删除ip
-            # deletByIP(pIp)
-            proxy = {
-                'http': 'http://%s:%s' % (pIp, pPort),
-                'https': 'http://%s:%s' % (pIp, pPort)
-            }
-            try:
-                while count > 0:
-                    if not searchAndCrawlByName("noName", proxy=proxy):
-                        break
-                    count = count - 1
-            except Exception as e:
-                print traceback.format_exc()
-
-        except Exception as ge:
-            print traceback.format_exc()
-
-
+    # unknown
             # begin = 7100000
     # end = 7200000
     #
