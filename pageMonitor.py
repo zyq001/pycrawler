@@ -161,6 +161,9 @@ def startFromYml():
                     sendEmail(tagStr, forTagStr, site)
                 # else:
                     UpdateContentByUrl(site,tagStr)
+                    print u'【有变化】：', site
+                else:
+                    print u'no change: ',site
         time.sleep(60 * 2)
 
 if __name__ == "__main__":
