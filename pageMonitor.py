@@ -89,7 +89,8 @@ def sendEmail(newContent, oldContent, url):
     mail_pass = MAILPASS  # 口令
 
     sender = NO_REPLY_TATATIMES_COM
-    receivers = [RECIEVERS]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    # receivers = [RECIEVERS]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    receivers = RECIEVERS  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
     msg = u'''
     <table class="table table-striped m-b-none text-sm" style="background-color: transparent;border-collapse: collapse;border-spacing: 0;box-sizing: border-box;display: table;border-collapse: separate;border-spacing: 2px;border-color: grey;">
